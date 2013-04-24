@@ -1,0 +1,9 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div class="text-success">
+  Short URL is
+  <a href="{{url_for('get', urlhash=hashed)}}">
+    {{url_for('get', urlhash=hashed, _external=True)}}
+  </a>
+</div>
+{% endblock %}

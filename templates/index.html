@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+{% block content %} 
+        <form method="POST" enctype="multipart/form-data" action="{{url_for('add')}}">
+          <fieldset>
+            <legend>Kai's URL shortener</legend>
+            <div class="control-group">
+              <label>URL</label>
+              <input type="url" name="url" id="url" placeholder="URL here">
+              <label>Magic cookie</label>
+              <input type="password" name="magiccookie" id="magiccookie">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </fieldset>
+        </form>
+{% endblock %}
